@@ -1,0 +1,6 @@
+- hosts: webservers
+  gather_facts: False
+  roles:
+    - nginx
+  become: true
+  become_method: sudo

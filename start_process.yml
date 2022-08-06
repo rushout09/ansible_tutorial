@@ -1,0 +1,12 @@
+---
+
+  - name: start demo process
+    hosts: all
+    gather_facts: no
+    tasks:
+      - name: copy running running_process file to remote
+        copy: 
+          src: running_process.py
+          dest: $HOME/running_process.py
+      - name: start python process
+        shell: python3 running_process.py
