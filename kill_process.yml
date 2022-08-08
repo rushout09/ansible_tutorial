@@ -1,9 +1,6 @@
----
-
-  - name: start demo process
-    hosts: all
-    gather_facts: no
-    tasks:
-      - name: stop python process
-        shell: pkill python3
-
+- hosts: all
+  gather_facts: False
+  roles:
+    - pkill
+  become: true
+  become_method: sudo

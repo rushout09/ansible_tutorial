@@ -1,0 +1,2 @@
+- name: stop python process
+  shell: pkill {{ process_name }}
